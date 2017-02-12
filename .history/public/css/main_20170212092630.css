@@ -1,0 +1,49 @@
+ .margin {
+     margin: 10px;
+ }
+ 
+ .switch {
+     height: 28px;
+ }
+ 
+ .actions {
+     margin-top: 20px;
+     margin-bottom: 20px;
+ }
+ 
+ .chip {
+     font-size: 11px;
+     text-align: center;
+ }
+ 
+ .save {
+     margin: 20px;
+ }
+ 
+ h3.title {
+     font-size: 1.2rem;
+ }
+ 
+ .item {
+     border-bottom: 1px dotted #ddd;
+     padding-top: 20px;
+ }
+ 
+ .intitule {}
+ 
+ .marque {
+     font-weight: bold;
+     margin: 0;
+ }
+ 
+ .tabs {
+     overflow: hidden;
+ }
+ 
+ .tab.disabled a {
+     color: grey !important;
+ }
+ 
+ section .l2 {
+     margin-top: 25%;
+ }

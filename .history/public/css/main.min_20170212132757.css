@@ -1,0 +1,100 @@
+.margin {
+    margin: 10px
+}
+
+.switch {
+    height: 28px
+}
+
+.actions {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.chip {
+    font-size: 11px;
+    text-align: center
+}
+
+.save {
+    margin: 20px
+}
+
+h3.title {
+    font-size: 1.2rem
+}
+
+.item {
+    border-bottom: 1px dotted #ddd;
+    padding-top: 20px
+}
+
+.tabs .tab a {
+    color: #009688
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #009688
+}
+
+.tabs .tab.disabled a,
+.tabs .tab.disabled a:hover {
+    color: rgba(102, 147, 153, 0.7)
+}
+
+.tabs .indicator {
+    background-color: #009688
+}
+
+.marque {
+    font-weight: 700;
+    margin: 0
+}
+
+.tabs {
+    overflow: hidden
+}
+
+.tab.disabled a {
+    color: grey!important
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .feature {
+        text-align: center;
+        padding-top: 15px;
+    }
+    .marque {
+        margin-bottom: 15px !important;
+    }
+    form .intitule {
+        text-align: center;
+    }
+    section .l2 img {
+        width: 80px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    section .l2 {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    section .l2 {
+        margin-top: 25%;
+    }
+}
+
+form .intitule {
+    font-size: 13px
+}
+
+input {
+    font-size: 1.4rem !important;
+}
