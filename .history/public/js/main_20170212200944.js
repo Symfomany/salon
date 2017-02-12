@@ -1,6 +1,6 @@
 $(function() {
 
-    NProgress.set(0.1);
+    NProgress.set(0.33);
     //NProgress.done();
     $('input#siren').mask('000 000 000');
     $('input#phone').mask('00 00 00 00 00');
@@ -25,7 +25,6 @@ $(function() {
 
     $('input#firstname, input#lastname').blur(function() {
         $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
-        NProgress.set(0.15);
     });
 
     $('form button[type="button"]').click(function() {
@@ -55,7 +54,6 @@ $(function() {
 
             if (isFormValid()) {
                 $('form #one button').attr('disabled', false);
-                NProgress.set(0.33);
             }
         }
     });
@@ -77,7 +75,6 @@ $(function() {
             $('form #one button').attr('disabled', true);
         } else {
             $('form #one button').attr('disabled', false);
-            NProgress.set(0.25);
         }
     });
 
@@ -95,7 +92,6 @@ $(function() {
 
                 } else {
                     $('input[type="email"]').addClass('valid');
-                    NProgress.set(0.20);
                     $('#email').parents(".animated").find('i').text('done').addClass('teal-text');
                 }
             });
@@ -108,20 +104,20 @@ $(function() {
 
     $('div#two').on('change', ':checkbox.already', function() {
         if ($(this).is(":checked")) {
-            NProgress.inc(0.01);
+            NProgress.inc(0.02);
             $(this).parents('div.feature').find('p.marque').addClass('blue-text');
         } else {
-            NProgress.inc(-0.01);
+            NProgress.inc(-0.02);
             $(this).parents('div.feature').find('p.marque').removeClass('blue-text');
         }
     });
 
     $('div#two').on('change', ':checkbox.discover', function() {
         if ($(this).is(":checked")) {
-            NProgress.inc(0.01);
+            NProgress.inc(0.02);
             $(this).parents('div.feature').find('p.marque').addClass('teal-text');
         } else {
-            NProgress.inc(-0.01);
+            NProgress.inc(-0.02);
             $(this).parents('div.feature').find('p.marque').removeClass('teal-text');
         }
     });
@@ -139,7 +135,7 @@ $(function() {
             if (nb == 5) {
                 $(this).addClass('light-blue');
                 $(this).html('<i class="material-icons">check</i> Terminer');
-                NProgress.set(0.90);
+                NProgress.set(0.95);
 
             } else {
                 $(this).removeClass('light-blue');
@@ -148,13 +144,16 @@ $(function() {
                 $('.naviguations button#moins').attr('disabled', false);
                 $('#list section').addClass('hide')
                 $('#list section:eq(' + nb + ')').removeClass('hide');
+                NProgress.set(0.66 + nb * 3);
+
             }
         } else {
             $(this).attr('disabled', true);
             $('.tabs .tab').addClass('disabled');
             $('.tabs .tab:eq(2)').removeClass('disabled');
             $('ul.tabs').tabs('select_tab', 'three');
-            NProgress.done();
+            NProgress.set(1);
+
             $.ajax({
                 url: 'register',
                 method: "POST",

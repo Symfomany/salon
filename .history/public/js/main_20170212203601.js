@@ -148,6 +148,7 @@ $(function() {
                 $('.naviguations button#moins').attr('disabled', false);
                 $('#list section').addClass('hide')
                 $('#list section:eq(' + nb + ')').removeClass('hide');
+                NProgress.inc(0.015);
             }
         } else {
             $(this).attr('disabled', true);

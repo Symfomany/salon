@@ -139,7 +139,7 @@ $(function() {
             if (nb == 5) {
                 $(this).addClass('light-blue');
                 $(this).html('<i class="material-icons">check</i> Terminer');
-                NProgress.set(0.90);
+                NProgress.set(0.95);
 
             } else {
                 $(this).removeClass('light-blue');
@@ -148,13 +148,16 @@ $(function() {
                 $('.naviguations button#moins').attr('disabled', false);
                 $('#list section').addClass('hide')
                 $('#list section:eq(' + nb + ')').removeClass('hide');
+                NProgress.set(0.66 + nb * 3);
+
             }
         } else {
             $(this).attr('disabled', true);
             $('.tabs .tab').addClass('disabled');
             $('.tabs .tab:eq(2)').removeClass('disabled');
             $('ul.tabs').tabs('select_tab', 'three');
-            NProgress.done();
+            NProgress.set(1);
+
             $.ajax({
                 url: 'register',
                 method: "POST",
