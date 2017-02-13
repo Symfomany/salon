@@ -36,32 +36,37 @@ $(function() {
         }
     });
 
-    $.ajax({
+     $.ajax({
         type: 'GET', // your request type
-        url: "import",
-        success: function(response) {
-            console.log(response);
-
-            $('input.autocomplete').autocomplete({
-                limit: 52,
-                data: response,
-                onAutocomplete: function(item) {
-                    $.get("accord/" + item.toLowerCase(), function(data) {
-                        $("div#list").html(data);
-                    });
-
-                    $('input.autocomplete').parents(".animated").find('i').text('done').addClass('teal-text');
-
-
-                    if (isFormValid()) {
-                        $('form #one button').attr('disabled', false);
-                        NProgress.set(0.33);
-                    }
-                }
+        url: "/import",
+        success: function (response) {
+            var myArray = $.parseJSON(response);
+               $('input.autocomplete').autocomplete({
+        limit: 52,
+        data: {
+            "Macrosoft": null,
+            "Macintosh": null,
+            "Macbook": null,
+            "Marshall": null,
+            "Matuidi": null
+        },
+        onAutocomplete: function(item) {
+            $.get("accord/" + item.toLowerCase(), function(data) {
+                $("div#list").html(data);
             });
+
+            $('input.autocomplete').parents(".animated").find('i').text('done').addClass('teal-text');
+
+
+            if (isFormValid()) {
+                $('form #one button').attr('disabled', false);
+                NProgress.set(0.33);
+            }
         }
     });
-
+        }
+     });
+ 
 
 
 

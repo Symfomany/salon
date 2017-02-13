@@ -44,7 +44,7 @@ $(function() {
 
             $('input.autocomplete').autocomplete({
                 limit: 52,
-                data: response,
+                data: myArray,
                 onAutocomplete: function(item) {
                     $.get("accord/" + item.toLowerCase(), function(data) {
                         $("div#list").html(data);

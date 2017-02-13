@@ -17,11 +17,11 @@ class ProviderController extends Controller
     public function import(){
         $files = File::allFiles(base_path("import"));
         $tab = [];
+        exit(dump(array_column($files, 'basename')));
         foreach($files as $file){
-            $id =  explode(".", $file->getFilename());
-            $tab[ucfirst($id[0])] =  null;
+            $tab[] =  $file->getFilename());
         }
-
+        
         return $tab;
     }
 

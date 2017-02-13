@@ -16,13 +16,8 @@ class ProviderController extends Controller
     */
     public function import(){
         $files = File::allFiles(base_path("import"));
-        $tab = [];
-        foreach($files as $file){
-            $id =  explode(".", $file->getFilename());
-            $tab[ucfirst($id[0])] =  null;
-        }
-
-        return $tab;
+        exit(dump(array_column($files, 'basename')));
+        return $files;
     }
 
     /**

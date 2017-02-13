@@ -12,17 +12,11 @@ class ProviderController extends Controller
 {   
 
     /**
-    * Get all names of Files imported
+    * Get Stream File in XLS
     */
     public function import(){
         $files = File::allFiles(base_path("import"));
-        $tab = [];
-        foreach($files as $file){
-            $id =  explode(".", $file->getFilename());
-            $tab[ucfirst($id[0])] =  null;
-        }
-
-        return $tab;
+        return files;
     }
 
     /**
@@ -58,6 +52,7 @@ class ProviderController extends Controller
             $m->to($register->email, $register->lastname)->subject('Welcome to Salon ORCAB');
         });
 
+
         return [true];
     }
 
@@ -69,9 +64,13 @@ class ProviderController extends Controller
         $resultat = Excel::load(base_path("import/{$id}.xls"), function($reader){});
 
         $resultatOne = $resultat->take(6)->get();
+
         $resultatTwo = $resultat->skip(6)->take(6)->get();
+
         $resultatThree = $resultat->skip(12)->take(6)->get();
+
         $resultatFour = $resultat->skip(18)->take(6)->get();
+
         $resultatFive = $resultat->skip(24)->take(6)->get();
 
         return view('provider.accords',

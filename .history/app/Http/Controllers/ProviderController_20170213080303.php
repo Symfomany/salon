@@ -19,7 +19,7 @@ class ProviderController extends Controller
         $tab = [];
         foreach($files as $file){
             $id =  explode(".", $file->getFilename());
-            $tab[ucfirst($id[0])] =  null;
+            $tab[] =  $id;
         }
 
         return $tab;
