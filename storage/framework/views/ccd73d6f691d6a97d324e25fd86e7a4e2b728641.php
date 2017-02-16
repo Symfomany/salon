@@ -5,7 +5,7 @@
 
        <div class="col s12 l6 m6">
         <?php $__currentLoopData = $resultat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if(!empty($item) && $loop->index != 0): ?>
+            <?php if(!empty($item) && $loop->index != 'intitule'): ?>
                 <div class="row feature">
                     <div class="col l4 m4 s12">
                         <p class="marque"><?php echo e($item); ?></p>

@@ -3,7 +3,6 @@
                         <div class="col l2 m2 s12">
                                 <img src="<?php echo e(asset('img/five.png')); ?>" class="responsive-img" />
                         </div>
-
                         <div class="col l10 m10 s12">
                                 <?php echo $__env->renderEach('provider.accord', $resultatOne, 'resultat'); ?>
                         </div>
