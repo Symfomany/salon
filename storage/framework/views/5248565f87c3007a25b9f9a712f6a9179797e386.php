@@ -150,6 +150,6 @@
         <script src="<?php echo e(asset('js/materialize.min.js')); ?>"></script>
         <script src="<?php echo e(asset('js/jquery.mask.min.js')); ?>"></script>
         <script src="<?php echo e(asset('js/nprogress.js')); ?>"></script>
-        <script src="<?php echo e(asset('js/main.js')); ?>"></script>
+        <script src="<?php echo e(asset('js/main.min.js')); ?>"></script>
     </body>
 </html>
