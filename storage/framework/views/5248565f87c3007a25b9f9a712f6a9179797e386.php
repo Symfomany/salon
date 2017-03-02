@@ -10,9 +10,7 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="<?php echo e(asset('css/materialize.min.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(asset('css/animate.min.css')); ?>">
-        <link rel='stylesheet' href="<?php echo e(asset('css/nprogress.css')); ?>"/>
-
-        <link  rel="stylesheet" href="<?php echo e(asset('css/main.min.css')); ?>" />
+        <link  rel="stylesheet" href="<?php echo e(asset('css/main.css')); ?>" />
 
     </head>
     <body>
@@ -66,7 +64,7 @@
 
                             <div class=" animated fadeIn input-field col s12 m6 l6">
                             <i class="material-icons prefix">fingerprint</i>
-                            <input autocomplete="off" name="siren" placeholder="Format: 552 100 554" pattern="^(RCS )?([0-9]{3} ){2}[0-9]{3}$|^([0-9]{3} ){3}[0-9]{4}$" required id="siren" type="tel" class="validate">
+                            <input autocomplete="off" name="siren" placeholder="Format: 552 100 554" pattern="^[0-9]{14}$" required id="siren" type="tel" class="validate">
                             <label for="siren">SIREN*</label>
                             </div>
 
@@ -96,7 +94,7 @@
                         </div>
                     </div>
                     <div class="row save col s12 m12 l12">
-                        <button type="button" disabled class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Créer mon compte</button>
+                        <button type="button" disabled class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Accéder aux accords</button>
                     </div>
             </div>
 
@@ -104,7 +102,7 @@
                         <div class="row hide-on-small-only">
                             <div class="actions col  offset-l8 offset-s6 offset-m8 s12">
                                 <div class="chip col l2 m2 s6" id="chipOne">
-                                    Etre rattaché
+                                    Souhaite être rattaché
                                 </div>
                                 <div class="chip col l2 m2 s6">
                                     Déjà utilisateur
@@ -133,6 +131,7 @@
             <h5>Vos demandes de rattachements ont bien été prises en compte, vous recevrez un récapitulatif par e­mail.</h5>
             <p>PME CENTRALE vous remercie et vous souhaite une bonne journée !</p>
             <img class="responsive-img" src="<?php echo e(asset('img/categories.png')); ?>" />
+            <a href="<?php echo e(route('home')); ?>" class="btn btn-primary">Revenir au début</a>
         </div>
         
         
@@ -141,7 +140,7 @@
     
     
     
- 
+    <p><small style="font-size: 0.5rem;">Built on version 1.2.1</small></p>
 </div>
 
    
@@ -149,7 +148,6 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="<?php echo e(asset('js/materialize.min.js')); ?>"></script>
         <script src="<?php echo e(asset('js/jquery.mask.min.js')); ?>"></script>
-        <script src="<?php echo e(asset('js/nprogress.js')); ?>"></script>
-        <script src="<?php echo e(asset('js/main.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('js/main.js')); ?>"></script>
     </body>
 </html>
