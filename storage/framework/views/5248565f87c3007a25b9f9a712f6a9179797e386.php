@@ -121,7 +121,7 @@
 
                         <div class="row naviguations center-align">
                             <button type="button" disabled class="btn waves-effect waves-light" id="moins"><i class="material-icons">keyboard_arrow_left</i> Précédent</button>
-                            <button type="button"  class="btn waves-effect waves-light" id="plus"><i class="material-icons">keyboard_arrow_right</i> Suivant</button>
+                            <button type="button"  class="btn waves-effect waves-light" id="plus">Suivant <i class="material-icons">keyboard_arrow_right</i></button>
                         </div>
 
             </div>
@@ -140,7 +140,7 @@
     
     
     
-    <p><small style="font-size: 0.5rem;">Built on version 1.2.1</small></p>
+    <p><small style="font-size: 0.5rem;float:right">Built on version 1.3.1</small></p>
 </div>
 
    

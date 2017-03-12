@@ -1,0 +1,109 @@
+ .margin {
+     margin: 10px;
+ }
+ 
+ .switch {
+     height: 28px;
+ }
+ 
+ .actions {
+     margin-top: 20px;
+     margin-bottom: 20px;
+ }
+ 
+ .chip {
+    font-size: 9px;
+    text-align: center;
+ }
+ 
+ .save {
+     margin: 20px;
+ }
+ 
+ h3.title {
+     font-size: 1.2rem;
+ }
+ 
+ .item {
+     border-bottom: 1px dotted #ddd;
+     padding-top: 20px;
+ }
+ 
+ .tabs .tab a {
+     color: #009688;
+ }
+ 
+ .tabs .tab a:hover,
+ .tabs .tab a.active {
+     background-color: transparent;
+     color: #009688;
+ }
+ 
+ .tabs .tab.disabled a,
+ .tabs .tab.disabled a:hover {
+     color: rgba(102, 147, 153, 0.7);
+ }
+ 
+ .tabs .indicator {
+     background-color: #009688;
+ }
+ 
+ .marque {
+     font-weight: bold;
+     margin: 0;
+     margin-top: 10px;
+ }
+ 
+ .tabs {
+     overflow: hidden;
+ }
+ 
+ .tab.disabled a {
+     color: grey !important;
+ }
+ 
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+     section .l2 {
+             margin-top: 50%;
+     }
+ }
+@media only screen and (min-width : 1224px){
+     section .l2 {
+             margin-top: 50%;
+     }
+ }
+ form .intitule {
+     font-size: 13px;
+ }
+
+ div#two .btn, div#two  .btn-large, div#two  .btn-flat{
+        height: 42px;
+ }
+  div#two .btn i, div#two .btn-large i, div#two .btn-floating i, div#two .btn-large i, div#two .btn-flat i{
+    display: inline-table;
+ }
+ #preloading {
+     z-index: 50000;
+     background-color: white;
+     opacity: 0.8;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     display: flex;
+     background-color: white;
+ }
+ 
+ .main-loader {
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: white;
+     background-color: rgba(255, 255, 255, 0.5);
+ }
