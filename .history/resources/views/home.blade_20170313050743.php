@@ -16,7 +16,7 @@
     <body>
     <div class="container">
             
-    <div class="row" id="logos">
+    <div class="row">
         <div class="col l3 m4 s12">
             <a href="{{ route('home')}}"><img src="{{ asset('img/logo.png')}}" class="logo responsive-img" /></a>
         </div>
@@ -103,10 +103,10 @@
             <div id="two" class="col s12">
                         <div class="row hide-on-small-only">
                             <div class="actions col  offset-l7 offset-s6 offset-m8 s12">
-                                <div class="chip col l3 m3 s6" id="chipOne">
+                                <div class="chip col l2 m2 s6" id="chipOne">
                                     Souhaite être rattaché
                                 </div>
-                                <div class="chip col l3 m3 s6">
+                                <div class="chip col l2 m2 s6">
                                     Déjà utilisateur
                                 </div>
                             </div> 
@@ -142,7 +142,7 @@
     
     
     {{-- end container --}}
-    <p><small style="font-size: 0.6rem;float:right">Built on version 1.3.3</small></p>
+    <p><small style="font-size: 0.5rem;float:right">Built on version 1.3.1</small></p>
 </div>
 
 

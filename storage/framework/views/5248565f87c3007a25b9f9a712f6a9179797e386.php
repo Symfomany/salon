@@ -16,7 +16,7 @@
     <body>
     <div class="container">
             
-    <div class="row">
+    <div class="row" id="logos">
         <div class="col l3 m4 s12">
             <a href="<?php echo e(route('home')); ?>"><img src="<?php echo e(asset('img/logo.png')); ?>" class="logo responsive-img" /></a>
         </div>
@@ -64,7 +64,7 @@
 
                             <div class=" animated fadeIn input-field col s12 m6 l6">
                             <i class="material-icons prefix">fingerprint</i>
-                            <input autocomplete="off" name="siren" placeholder="Format: 552 100 554" pattern="^[0-9]{14}$" required id="siren" type="tel" class="validate">
+                            <input autocomplete="off" name="siren" placeholder="Format: 55210055412356" pattern="^[0-9]{14}$" required id="siren" type="tel" class="validate">
                             <label for="siren">SIREN*</label>
                             </div>
 
@@ -100,11 +100,11 @@
 
             <div id="two" class="col s12">
                         <div class="row hide-on-small-only">
-                            <div class="actions col  offset-l8 offset-s6 offset-m8 s12">
-                                <div class="chip col l2 m2 s6" id="chipOne">
+                            <div class="actions col  offset-l7 offset-s6 offset-m8 s12">
+                                <div class="chip col l3 m3 s6" id="chipOne">
                                     Souhaite être rattaché
                                 </div>
-                                <div class="chip col l2 m2 s6">
+                                <div class="chip col l3 m3 s6">
                                     Déjà utilisateur
                                 </div>
                             </div> 
@@ -140,10 +140,9 @@
     
     
     
-    <p><small style="font-size: 0.5rem;float:right">Built on version 1.3.1</small></p>
+    <p><small style="font-size: 0.6rem;float:right">Built on version 1.3.3</small></p>
 </div>
 
-   
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="<?php echo e(asset('js/materialize.min.js')); ?>"></script>

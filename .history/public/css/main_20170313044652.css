@@ -1,7 +1,13 @@
 body{
     overflow-x: hidden;
 } 
-
+ .accord .l2 {
+    position: absolute;
+    top: 200px;
+ }
+ .accord .l2 img{
+         width: 80px;
+ }
  .margin {
      margin: 10px;
  }
@@ -16,9 +22,8 @@ body{
  }
  
  .chip {
-    font-size: 11px;
+    font-size: 9px;
     text-align: center;
-    text-shadow: 1px 1px #eee,1px 1px #eee;
  }
  
  .save {
@@ -29,7 +34,7 @@ body{
      font-size: 1.2rem;
  }
  
- .item:not(:last-child) {
+ .item {
      border-bottom: 1px dotted #ddd;
      padding-top: 20px;
  }
@@ -67,45 +72,6 @@ body{
      color: grey !important;
  }
  
- @media only screen and (min-device-width: 600px) {
-     .row .col.offset-l7.actions{
-        margin-left: 60%;
-     }
-    .accord .l2 {
-        position: absolute;
-        top: 170px;
-    }
-    .accord .l2 img{
-            width: 80px;
-    }
-    .row .col.l3.chip{
-        width: 20% !important;
-    }
- }
-
-@media only screen and (max-device-width: 600px){
-    .logo{
-        width: 185px;
-    }
-    #logos{
-        text-align: center;
-    }
-    .accord .col.s12 {
-        text-align: center;
-        margin-top: 10px;
-    }
-    .accord img {
-        width: 115px;
-    }
-    form p {
-        text-align: center;
-    }
-    .container .feature{
-        margin-top: 10px;
-    }
-}
-
-
  /*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
      section .l2 {
              margin-top: 50%;

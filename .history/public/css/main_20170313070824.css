@@ -18,7 +18,6 @@ body{
  .chip {
     font-size: 11px;
     text-align: center;
-    text-shadow: 1px 1px #eee,1px 1px #eee;
  }
  
  .save {

@@ -16,7 +16,7 @@
     <body>
     <div class="container">
             
-    <div class="row" id="logos">
+    <div class="row">
         <div class="col l3 m4 s12">
             <a href="{{ route('home')}}"><img src="{{ asset('img/logo.png')}}" class="logo responsive-img" /></a>
         </div>

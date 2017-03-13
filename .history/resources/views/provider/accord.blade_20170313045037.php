@@ -1,9 +1,9 @@
 <div class="row item animated fadeIn">
-        <div class="col s12 l5 m5">
+        <div class="col s12 l6 m6">
             <p class="truncate intitule">{{ $resultat['intitule'] }}</p>
         </div>
 
-       <div class="col s12 l7 m7">
+       <div class="col s12 l6 m6">
         @foreach($resultat as $item)
             @if(!empty($item) && $loop->index != 'intitule')
                 <div class="row feature">

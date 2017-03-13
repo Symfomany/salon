@@ -41,10 +41,11 @@ class ProviderController extends Controller
             "LOXAM" => "subscribed",
             "KILOUTOU" => "subscribed",
             "BUREAU VERITAS" => "subscribed",
-            "Groupe ACTUAL" => "subscribed", //no
+            "Groupe ACTUAL" => "subscribed",
+            "LOXAM" => "subscribed",
             "BUDGET"=> "subscribed",
             "FIRSTOP"=> "subscribed",
-            "T2S (Véhicules)"=> "subscribed", // no
+            "T2S (Véhicules)"=> "subscribed",
             "CHÂTEAU D EAU"=> "subscribed",
         ];
 
@@ -52,7 +53,8 @@ class ProviderController extends Controller
         if(!empty($tab)){
             $resultat = Excel::load(base_path("fournisseurs/fournisseurs.xls"), function($reader){});
             foreach($resultat->get() as $sheet){
-                if(isset($tab[$sheet['label']])){
+                dump($sheet['label']);
+                if(isset($tab[strtoupper($sheet['label'])])){
                     $liste[] = $sheet;
                 }
             }
@@ -106,7 +108,7 @@ class ProviderController extends Controller
         if(!empty($tab)){
             $resultat = Excel::load(base_path("fournisseurs/fournisseurs.xls"), function($reader){});
             foreach($resultat->get() as $sheet){
-                if(isset($tab[$sheet['label']])){
+                if(isset($tab[strtoupper($sheet['label'])])){
                     $liste[] = $sheet;
                 }
             }

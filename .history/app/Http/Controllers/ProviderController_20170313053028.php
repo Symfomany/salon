@@ -106,7 +106,7 @@ class ProviderController extends Controller
         if(!empty($tab)){
             $resultat = Excel::load(base_path("fournisseurs/fournisseurs.xls"), function($reader){});
             foreach($resultat->get() as $sheet){
-                if(isset($tab[$sheet['label']])){
+                if(isset($tab[strtoupper($sheet['label'])])){
                     $liste[] = $sheet;
                 }
             }

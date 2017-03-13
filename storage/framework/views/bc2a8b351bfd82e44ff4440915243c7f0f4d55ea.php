@@ -166,8 +166,8 @@
                         <p style="Margin-top: 0;Margin-bottom: 20px;text-align: center;font-size:13px; font-style: italic; color: #444">Copyright © 2017 PME CENTRALE, All rights reserved.</p>
                         <p style="Margin-top: 0;Margin-bottom: 20px;text-align: center;font-size:13px; font-style: italic;color: #444">
                         PME CENTRALE<br>
-                        29 rue des sources<br>
-                        Lyon&nbsp;69009<br>
+                        185 allée des Cyprès<br>
+                        69760 LIMONEST<br>
                         France
                         </p>
                 </div>
