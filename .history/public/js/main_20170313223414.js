@@ -2,7 +2,7 @@ $(function () {
 
 
     if ($('input#siren').length && $('input#phone').length) {
-        $('input#siren').mask('000000000');
+        $('input#siren').mask('00000000000000');
         $('input#phone').mask('00 00 00 00 00');
     }
 

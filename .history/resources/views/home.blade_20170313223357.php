@@ -142,7 +142,7 @@
     
     
     {{-- end container --}}
-    <p><small style="font-size: 0.6rem;float:right">Built on version 1.4.1</small></p>
+    <p><small style="font-size: 0.6rem;float:right">Built on version 1.3.3</small></p>
 </div>
 
 

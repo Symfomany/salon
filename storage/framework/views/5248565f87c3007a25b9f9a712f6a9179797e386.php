@@ -64,7 +64,7 @@
 
                             <div class=" animated fadeIn input-field col s12 m6 l6">
                             <i class="material-icons prefix">fingerprint</i>
-                            <input autocomplete="off" name="siren" placeholder="Format: 55210055412356" pattern="^[0-9]{14}$" required id="siren" type="tel" class="validate">
+                            <input autocomplete="off" name="siren" placeholder="Format: XXXXXXXXX" pattern="^[0-9]{9}$" required id="siren" type="tel" class="validate">
                             <label for="siren">SIREN*</label>
                             </div>
 
@@ -140,7 +140,7 @@
     
     
     
-    <p><small style="font-size: 0.6rem;float:right">Built on version 1.3.3</small></p>
+    <p><small style="font-size: 0.6rem;float:right">Built on version 1.4.1</small></p>
 </div>
 
 

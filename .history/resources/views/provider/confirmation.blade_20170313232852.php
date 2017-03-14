@@ -69,61 +69,55 @@
                                  <div style="Margin-left: 20px;Margin-right: 20px;">
                                     <div class="divider" style="display: block;font-size: 2px;line-height: 2px;Margin-left: auto;Margin-right: auto;width: 40px;background-color: #ccc;Margin-bottom: 20px;">&nbsp;</div>
                                  </div>
-                                
+                                {{-- Separator --}}
 
-                                 <?php $__currentLoopData = $liste; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                 @foreach($liste as $item)
 
-                                    <?php if($item['image_url'] != ""): ?>
+                                    @if($item['image_url'] != "")
                                         <div style="font-size: 12px;font-style: normal;font-weight: normal;" align="center">
-                                            <img style="border: 0;display: block;height: auto;width: 100%;max-width: 150px;" alt="" width="150" src="<?php echo e($item['image_url']); ?>" />
+                                            <img style="border: 0;display: block;height: auto;width: 100%;max-width: 150px;" alt="" width="150" src="{{ $item['image_url'] }}" />
                                         </div>
-                                    <?php endif; ?>
+                                    @endif
 
                                     <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 20px;">
                                         <p style="Margin-top: 0;Margin-bottom: 20px;text-align: center;">
-                                        Pour bénéficier des tarifs avantageux <?php echo e($item['label']); ?> négociés par <strong>PME CENTRALE</strong></p>
+                                        Pour bénéficier des tarifs avantageux {{ $item['label'] }} négociés par <strong>PME CENTRALE</strong></p>
                                     </div>
 
                                     <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 20px;">
                                         <p style="Margin-top: 0;Margin-bottom: 20px;text-align: center;">
-                                          <?php if($item['calltoaction'] != "NA"): ?>
-                                            <?php echo e($item['calltoaction']); ?>
+                                          @if($item['calltoaction'] != "NA")
+                                            {{ $item['calltoaction'] }}
+                                          @endif
 
-                                          <?php endif; ?>
+                                         @if($item['contactname'] != "NA"){{ $item['contactname'] }}  @endif
+                                          @if($item['contactemail'] != "NA") par E-Mail : 
+                                          <a href="mailto:{{ $item['contactemail'] }}">{{ $item['contactemail'] }}</a> @endif
+                                          @if($item['contactphonenumber'] != "NA") au {{ $item['contactphonenumber'] }} @endif
 
-                                         <?php if($item['contactname'] != "NA"): ?><?php echo e($item['contactname']); ?>  
-                                         <?php endif; ?>
-                                          
-                                          <?php if($item['contactemail'] != "NA"): ?> par E-Mail : 
-                                          <a><?php echo e($item['contactemail']); ?></a> 
-                                          <?php endif; ?>
-                                          
-                                          <?php if($item['contactphonenumber'] != "NA"): ?> au <?php echo e($item['contactphonenumber']); ?> 
-                                          <?php endif; ?>
-
-                                          <?php if($item['contactfax'] != "NA"): ?> par FAX au <?php echo e($item['contactfax']); ?> <?php endif; ?>
+                                          @if($item['contactfax'] != "NA") par FAX au {{ $item['contactfax'] }} @endif
                                          
-                                         <?php if($item['contact1email'] != "NA"): ?> par E-Mail : 
-                                          <a><?php echo e($item['contact1email']); ?></a> <?php endif; ?>
+                                         @if($item['contact1email'] != "NA") par E-Mail : 
+                                          <a href="mailto:{{ $item['contact1email'] }}">{{ $item['contact1email'] }}</a> @endif
 
-                                        <?php if($item['contact1phonenumber'] != "NA"): ?> au <?php echo e($item['contact1phonenumber']); ?> <?php endif; ?>
+                                        @if($item['contact1phonenumber'] != "NA") au {{ $item['contact1phonenumber'] }} @endif
 
                                         </p>
                                     </div>
                                     
-                                    
+                                    {{-- Separator --}}
                                     <div style="Margin-left: 20px;Margin-right: 20px;">
                                         <div style="line-height:10px;font-size:1px">&nbsp;</div>
                                     </div>
 
-                                 <?php if($item['attachmenturl'] != "NA"): ?>
+                                 @if($item['attachmenturl'] != "NA")
 
                                     <div style="Margin-left: 20px;Margin-right: 20px;">
                                         <div class="btn btn--shadow btn--large" style="Margin-bottom: 20px;text-align: center;">
-                                        <!--[if !mso]--><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px 13px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);background-color: #5db2e4; color: #ffffff; font-family: 'Open Sans', sans-serif !important;font-family: &quot;Open Sans&quot;,sans-serif;" href="<?php echo e($item['attachmenturl']); ?>">Téléchargez le document nécessaire à votre rattachement</a><!--[endif]-->
+                                        <!--[if !mso]--><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px 13px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);background-color: #5db2e4; color: #ffffff; font-family: 'Open Sans', sans-serif !important;font-family: &quot;Open Sans&quot;,sans-serif;" href="{{ $item['attachmenturl'] }}">Téléchargez le document nécessaire à votre rattachement</a><!--[endif]-->
                                             <!--[if mso]>
                                         <p style="line-height:0;margin:0;">&nbsp;</p>
-                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="<?php echo e($item['attachmenturl']); ?>" style="width:294px" arcsize="9%" fillcolor="#5DB2E4" stroke="f">
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{ $item['attachmenturl'] }}" style="width:294px" arcsize="9%" fillcolor="#5DB2E4" stroke="f">
                                             <v:shadow on="t" color="#4A8EB6" offset="0,2px"></v:shadow>
                                             <v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,10px">
                                                 <center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">T&#233;l&#233;charger le BON DE COMMANDE</center>
@@ -132,12 +126,12 @@
                                         <![endif]-->
                                         </div>
                                     </div>
-                                 <?php endif; ?>
+                                 @endif
 
                                     <div style="Margin-left: 20px;Margin-right: 20px;">
                                         <div class="divider" style="display: block;font-size: 2px;line-height: 2px;Margin-left: auto;Margin-right: auto;width: 40px;background-color: #ccc;Margin-bottom: 20px;">&nbsp;</div>
                                     </div>
-                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                 @endforeach
 
                                  <div style="Margin-left: 20px;Margin-right: 20px;">
                                     <div style="line-height:72px;font-size:1px">&nbsp;</div>

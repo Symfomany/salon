@@ -12,7 +12,8 @@
         <section id="catTwo" class="hide accord">
             <div class="row">
                         <div class="col l2 m2 s12">
-                                <img src="<?php echo e(asset('img/one.png')); ?>" class="responsive-img" />
+                                <img style="width: 115px;" src="<?php echo e(asset('img/one.png')); ?>" 
+                                class="responsive-img" />
                         </div>
 
                         <div class="col l12 m12 s12">
@@ -23,8 +24,9 @@
 
          <section id="catThree" class="hide accord">
                 <div class="row">
-                        <div class="col l2 m12 s12">
-                                <img src="<?php echo e(asset('img/two.png')); ?>" class="responsive-img" />
+                        <div class="col l2 m2 s12">
+                                <img src="<?php echo e(asset('img/two.png')); ?>" 
+                                class="responsive-img" />
                         </div>
                         <div class="col l12 m12 s12">
                                 <?php echo $__env->renderEach('provider.accord', $resultatThree, 'resultat'); ?>
