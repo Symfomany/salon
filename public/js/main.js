@@ -1,5 +1,5 @@
 $(function () {
-
+    console.log('ok');
 
     if ($('input#siren').length && $('input#phone').length) {
         $('input#siren').mask('000000000');

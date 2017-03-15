@@ -91,14 +91,15 @@
 
                                           <?php endif; ?>
 
-                                         <?php if($item['contactname'] != "NA"): ?><?php echo e($item['contactname']); ?>  
+                                         <?php if($item['contactname'] != "NA"): ?> <?php echo e($item['contactname']); ?>  
                                          <?php endif; ?>
                                           
-                                          <?php if($item['contactemail'] != "NA"): ?> par E-Mail : 
-                                          <a><?php echo e($item['contactemail']); ?></a> 
+                                          <?php if($item['contactemail'] != "NA"): ?> 
+                                           <a href="mailto:<?php echo e($item['contactemail']); ?>"><?php echo e($item['contactemail']); ?></a> 
                                           <?php endif; ?>
                                           
-                                          <?php if($item['contactphonenumber'] != "NA"): ?> au <?php echo e($item['contactphonenumber']); ?> 
+                                          <?php if($item['contactphonenumber'] != "NA"): ?> au 
+                                          <a href="callto:<?php echo e($item['contactphonenumber']); ?>"><?php echo e($item['contactphonenumber']); ?></a>
                                           <?php endif; ?>
 
                                           <?php if($item['contactfax'] != "NA"): ?> par FAX au <?php echo e($item['contactfax']); ?> <?php endif; ?>
@@ -117,22 +118,21 @@
                                     </div>
 
                                  <?php if($item['attachmenturl'] != "NA"): ?>
-
-                                    <div style="Margin-left: 20px;Margin-right: 20px;">
-                                        <div class="btn btn--shadow btn--large" style="Margin-bottom: 20px;text-align: center;">
-                                        <!--[if !mso]--><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px 13px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);background-color: #5db2e4; color: #ffffff; font-family: 'Open Sans', sans-serif !important;font-family: &quot;Open Sans&quot;,sans-serif;" href="<?php echo e($item['attachmenturl']); ?>">Téléchargez le document nécessaire à votre rattachement</a><!--[endif]-->
-                                            <!--[if mso]>
-                                        <p style="line-height:0;margin:0;">&nbsp;</p>
-                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="<?php echo e($item['attachmenturl']); ?>" style="width:294px" arcsize="9%" fillcolor="#5DB2E4" stroke="f">
-                                            <v:shadow on="t" color="#4A8EB6" offset="0,2px"></v:shadow>
-                                            <v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,10px">
-                                                <center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">T&#233;l&#233;charger le BON DE COMMANDE</center>
-                                            </v:textbox>
-                                        </v:roundrect>
-                                        <![endif]-->
+                                        <div style="Margin-left: 20px;Margin-right: 20px;">
+                                            <div class="btn btn--shadow btn--large" style="Margin-bottom: 20px;text-align: center;">
+                                            <!--[if !mso]--><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px 13px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);background-color: #5db2e4; color: #ffffff; font-family: 'Open Sans', sans-serif !important;font-family: &quot;Open Sans&quot;,sans-serif;" href="<?php echo e($item['attachmenturl']); ?>">Téléchargez le document nécessaire à votre rattachement</a><!--[endif]-->
+                                                <!--[if mso]>
+                                            <p style="line-height:0;margin:0;">&nbsp;</p>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="<?php echo e($item['attachmenturl']); ?>" style="width:294px" arcsize="9%" fillcolor="#5DB2E4" stroke="f">
+                                                <v:shadow on="t" color="#4A8EB6" offset="0,2px"></v:shadow>
+                                                <v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,10px">
+                                                    <center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">T&#233;l&#233;charger le BON DE COMMANDE</center>
+                                                </v:textbox>
+                                            </v:roundrect>
+                                            <![endif]-->
+                                            </div>
                                         </div>
-                                    </div>
-                                 <?php endif; ?>
+                                    <?php endif; ?>
 
                                     <div style="Margin-left: 20px;Margin-right: 20px;">
                                         <div class="divider" style="display: block;font-size: 2px;line-height: 2px;Margin-left: auto;Margin-right: auto;width: 40px;background-color: #ccc;Margin-bottom: 20px;">&nbsp;</div>
